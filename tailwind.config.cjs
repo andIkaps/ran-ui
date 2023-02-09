@@ -17,7 +17,7 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: '1.5rem',
+        padding: '2rem',
       },
       colors: {
         primary: '#595BEF',

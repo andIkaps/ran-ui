@@ -13,3 +13,9 @@
     @apply antialiased tracking-wider dark:bg-slate-900;
   }
 }
+
+@layer components {
+  .container {
+    @apply md:px-14 lg:px-16;
+  }
+}
