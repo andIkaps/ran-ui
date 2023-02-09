@@ -6,7 +6,7 @@ import DownIcon from './icons/DownIcon'
 function DropDown({ refDropdown }) {
   return (
     <div
-      className='absolute -bottom-44 2xl:-bottom-52 -left-10 px-4 py-3.5 w-44  bg-primary rounded-md shadow-xl shadow-primary/20 transition-all'
+      className='absolute -bottom-44 2xl:-bottom-52 -left-10 px-4 py-3.5 w-44  bg-primary rounded-md shadow-xl shadow-primary/20 transition-all z-10'
       ref={refDropdown}
     >
       <ul className='flex flex-col text-lite xs:text-xs font-medium text-white md:text-sm 2xl:text-lg'>
@@ -97,7 +97,10 @@ function Navbar() {
 
 function Mobile({ refNavbar }) {
   return (
-    <div className='absolute -bottom-44 px-4 py-3.5 w-full right-0 bg-primary rounded-sm shadow-xl shadow-primary/20 transition-all' ref={refNavbar}>
+    <div
+      className='absolute -bottom-44 px-4 py-3.5 w-full right-0 bg-primary rounded-sm shadow-xl shadow-primary/20 transition-all z-10 md:hidden'
+      ref={refNavbar}
+    >
       <nav className='text-white'>
         <Navbar />
       </nav>
