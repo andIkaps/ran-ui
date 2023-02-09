@@ -10,7 +10,7 @@ export default function LandingPage() {
         <Header />
       </header>
 
-      <Hero data={db[0].landing_page.most_downloaded[0]} />
+      <Hero data={db[0].landing_page.most_downloaded} />
     </>
   )
 }
