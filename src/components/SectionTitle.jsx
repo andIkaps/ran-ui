@@ -27,16 +27,6 @@ export default function SectionTitle({ title, href, isButton, isVisible, buttonT
       </h1>
 
       {content}
-
-      {/* {isVisible && isButton ? (
-        <Button isPrimary hasShadow>
-          {buttonTitle}
-        </Button>
-      ) : (
-        <Button isPlain type={'link'} href={href}>
-          <ArrowRight />
-        </Button>
-      )} */}
     </header>
   )
 }

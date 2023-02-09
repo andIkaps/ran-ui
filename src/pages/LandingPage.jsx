@@ -4,6 +4,7 @@ import Hero from '../parts/Hero'
 import db from '../json/db_test.json'
 import NewRelease from '../parts/NewRelease'
 import OnGoing from '../parts/OnGoing'
+import Recommendations from '../parts/Recommendations'
 
 export default function LandingPage() {
   return (
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <main>
         <NewRelease data={db[0].landing_page.new_release} />
         <OnGoing data={db[0].landing_page.on_going} />
+        <Recommendations data={db[0].landing_page.recommended} />
       </main>
     </>
   )

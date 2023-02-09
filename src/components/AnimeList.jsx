@@ -12,7 +12,7 @@ function Card({ image, title, type, episode, timestamp, uploaded_by, synopsis, h
         <h1 className='text-xs font-semibold truncate text-dark-200 sm:text-sm md:text-base' title={title}>
           {title} ({type})
         </h1>
-        <div className='text-light-200 md:flex md:justify-between md:items-center md:flex-col lg:items-start'>
+        <div className='text-light-200 md:flex md:justify-between md:items-center md:flex-row lg:flex-col lg:items-start'>
           <h2 className='text-xs my-1 md:text-sm lg:my-2'>{episode}</h2>
           <span className='text-lite md:text-xs lg:whitespace-nowrap'>
             {timestamp} by : {uploaded_by}
