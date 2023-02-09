@@ -4,7 +4,7 @@ import BrandIcon from './BrandIcon'
 
 function Footer() {
   return (
-    <footer className='container my-20 grid grid-cols-2 gap-8 lg:grid-cols-5 py-10'>
+    <footer className='container my-20 grid grid-cols-2 gap-8 lg:grid-cols-5'>
       <section className='col-span-2 md:col-span-1 lg:col-span-2'>
         <BrandIcon />
         <p className='mt-5 text-light-100 leading-8 text-xs'>
@@ -50,7 +50,7 @@ function Footer() {
           </li>
         </ul>
       </section>
-      <section className='col-span-2 lg:col-span-5 text-center'>
+      <section className='col-span-2 lg:col-span-5 text-center mt-10'>
         <p className='text-xs text-light-100'>
           Made with <span className='text-red-600'>♥</span> by RAN Team
         </p>

@@ -22,7 +22,7 @@ export default function SectionTitle({ title, href, isButton, isVisible, buttonT
 
   return (
     <header className='flex justify-between items-center'>
-      <h1 className='font-semibold text-xs sm:text-sm md:text-lg'>
+      <h1 className='font-semibold text-xs xs:text-base md:text-lg'>
         {boldTitle} <span className='font-normal'>{plainTitle}</span>
       </h1>
 
