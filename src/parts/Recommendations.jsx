@@ -32,11 +32,6 @@ export default function Recommendations({ data }) {
           if (index + 1 === 4 || index + 1 === 5) className = 'md:hidden lg:block'
           return <CardRecommendation item={item} className={className} />
         })}
-        {/* <CardRecommendation />
-        <CardRecommendation className={'md:col-span-2 md:row-span-2 md:h-full lg:col-span-1 lg:row-span-1'} />
-        <CardRecommendation className={'md:col-span-2 lg:col-span-1 lg:row-span-2 lg:h-full'} />
-        <CardRecommendation className={'md:hidden lg:block'} />
-        <CardRecommendation className={'md:hidden lg:block'} /> */}
       </main>
     </section>
   )
