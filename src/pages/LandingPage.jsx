@@ -6,6 +6,7 @@ import NewRelease from '../parts/NewRelease'
 import OnGoing from '../parts/OnGoing'
 import Recommendations from '../parts/Recommendations'
 import BatchAnime from '../parts/BatchAnime'
+import Footer from '../parts/Footer'
 
 export default function LandingPage() {
   return (
@@ -22,6 +23,8 @@ export default function LandingPage() {
         <Recommendations data={db[0].landing_page.recommended} />
         <BatchAnime data={db[0].landing_page.batch_anime} />
       </main>
+
+      <Footer />
     </>
   )
 }
