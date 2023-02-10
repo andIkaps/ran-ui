@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Link } from 'react-router-dom'
+import { Fade } from 'react-awesome-reveal'
 
 function CardRecommendation({ className, item }) {
   return (
@@ -26,27 +27,29 @@ function CardRecommendation({ className, item }) {
 export default function Recommendations({ data }) {
   const item = data[0]
   return (
-    <section className='container my-20'>
-      <SectionTitle title={'Recommendations'} href={'/'} isVisible />
+    <Fade>
+      <section className='container my-20'>
+        <SectionTitle title={'Recommendations'} href={'/'} isVisible />
 
-      <div className='mt-8 md:hidden'>
-        <Swiper spaceBetween={10} slidesPerView={2} modules={[Autoplay]} autoplay={{ delay: 3000, disableOnInteraction: false }}>
-          {data.map((item, index) => (
-            <SwiperSlide key={`${item.uuid}${index}`}>
-              <CardRecommendation item={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      <main className='hidden md:grid gap-5 grid-cols-1 grid-rows-1 mt-8 md:grid-cols-4 md:grid-rows-2 lg:grid-cols-3'>
-        {data.map((item, index) => {
-          let className = ''
-          if (index + 1 === 2) className = 'md:col-span-2 md:row-span-2 md:h-full lg:col-span-1 lg:row-span-1'
-          if (index + 1 === 3) className = 'md:col-span-2 lg:col-span-1 lg:row-span-2'
-          if (index + 1 === 4 || index + 1 === 5) className = 'md:hidden lg:block'
-          return <CardRecommendation key={`${item.uuid}${index}`} item={item} className={className} />
-        })}
-      </main>
-    </section>
+        <div className='mt-8 md:hidden'>
+          <Swiper spaceBetween={10} slidesPerView={2} modules={[Autoplay]} autoplay={{ delay: 3000, disableOnInteraction: false }}>
+            {data.map((item, index) => (
+              <SwiperSlide key={`${item.uuid}${index}`}>
+                <CardRecommendation item={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <main className='hidden md:grid gap-5 grid-cols-1 grid-rows-1 mt-8 md:grid-cols-4 md:grid-rows-2 lg:grid-cols-3'>
+          {data.map((item, index) => {
+            let className = ''
+            if (index + 1 === 2) className = 'md:col-span-2 md:row-span-2 md:h-full lg:col-span-1 lg:row-span-1'
+            if (index + 1 === 3) className = 'md:col-span-2 lg:col-span-1 lg:row-span-2'
+            if (index + 1 === 4 || index + 1 === 5) className = 'md:hidden lg:block'
+            return <CardRecommendation key={`${item.uuid}${index}`} item={item} className={className} />
+          })}
+        </main>
+      </section>
+    </Fade>
   )
 }

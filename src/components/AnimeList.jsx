@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 import { Link } from 'react-router-dom'
 import Button from './Button'
 import ArrowRight from './icons/ArrowRight'
@@ -37,21 +38,23 @@ function Card({ image, title, type, episode, timestamp, uploaded_by, synopsis, h
 export default function AnimeList({ data }) {
   return (
     <main className='grid grid-cols-2 gap-5 mt-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-8'>
-      {data.map((item, index) => {
-        return (
-          <Card
-            key={`${item.uuid}${index}`}
-            image={item.image}
-            title={item.jp_anime_title}
-            type={item.anime_type}
-            episode={'Epsisode 7'}
-            timestamp={'14 minutes ago'}
-            uploaded_by={item.uploaded_by}
-            synopsis={item.synopsis}
-            href={'/'}
-          />
-        )
-      })}
+      <Fade cascade damping={0.1} triggerOnce={true}>
+        {data.map((item, index) => {
+          return (
+            <Card
+              key={`${item.uuid}${index}`}
+              image={item.image}
+              title={item.jp_anime_title}
+              type={item.anime_type}
+              episode={'Epsisode 7'}
+              timestamp={'14 minutes ago'}
+              uploaded_by={item.uploaded_by}
+              synopsis={item.synopsis}
+              href={'/'}
+            />
+          )
+        })}
+      </Fade>
     </main>
   )
 }

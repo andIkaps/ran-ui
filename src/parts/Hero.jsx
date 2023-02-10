@@ -2,13 +2,14 @@ import React from 'react'
 import Button from '../components/Button'
 import { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Fade } from 'react-awesome-reveal'
 
 import 'swiper/css'
 import 'swiper/css/autoplay'
 
 export default function Hero({ data }) {
   return (
-    <>
+    <Fade triggerOnce={true}>
       <Swiper modules={[Autoplay]} spaceBetween={50} slidesPerView={1} autoplay={{ delay: 3000, disableOnInteraction: false }}>
         {data.map((item, index) => {
           return (
@@ -39,6 +40,6 @@ export default function Hero({ data }) {
           )
         })}
       </Swiper>
-    </>
+    </Fade>
   )
 }

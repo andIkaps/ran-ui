@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { Fade } from 'react-awesome-reveal'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import DownIcon from '../components/icons/DownIcon'
