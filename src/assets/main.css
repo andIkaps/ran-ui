@@ -16,6 +16,6 @@
 
 @layer components {
   .container {
-    @apply md:px-14 lg:px-16;
+    @apply px-4 xs:px-0 md:px-8;
   }
 }
